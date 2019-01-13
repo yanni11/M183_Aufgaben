@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "OTP";
+}
+
+<div class="otplogindiv">
+	<h2>Log in</h2>
+	<hr />
+	@if (ViewBag.Lvl == 1)
+	{
+		<form method="post" action="OTPLogin">
+			<p>Username</p>
+			<input type="text" name="username" class="txtbox" />
+			<p>Password</p>
+			<input type="password" name="password" class="txtbox" />
+			<input type="submit" value="Log in" class="btn" />
+		</form>
+	}
+	else if (ViewBag.Lvl == 2)
+	{
+		<form method="post" action="OTPVerify">
+			<p>Token</p>
+			<input type="text" name="token" class="txtbox" />
+			<input type="submit" value="Verify" class="btn" />
+		</form>
+	}
+
+</div>
+
+

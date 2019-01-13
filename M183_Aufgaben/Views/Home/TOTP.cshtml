@@ -1,0 +1,25 @@
+﻿
+@{
+	ViewBag.Title = "TOTP";
+}
+
+<h2>TOTP</h2>
+
+@Html.ActionLink("Setup Authentication", "SetupAuthentication", "Home", null, new { @class = "totplink" })
+
+
+<div class="otplogindiv">
+	<h2>Log in</h2>
+	<hr />
+	<form method="post" action="TOTPLogin">
+		<p>Username</p>
+		<input type="text" name="username" class="txtbox" />
+		<p>Password</p>
+		<input type="password" name="password" class="txtbox" />
+		<p>Token</p>
+		<input type="text" name="token" class="txtbox" />
+		<input type="submit" value="submit" class="btn" />
+	</form>
+</div>
+
+

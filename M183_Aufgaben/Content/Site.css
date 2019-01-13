@@ -1,0 +1,181 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+li {
+	list-style-type: none; 
+}
+
+ul {
+	margin: 0; 
+	padding: 0;
+}
+a {
+	text-decoration:none;
+}
+.ex-navi {
+margin-top: 100px;
+}
+.ex-navi a {
+	background: lightgray;
+	color: black;
+	display: block;
+	width: 300px;
+	margin: 2px auto;
+	text-align: center;
+	line-height: 25px;
+	transition: 0.2s;
+}
+.ex-navi a:hover {
+	background: gray;
+	color: white;
+}
+
+h2 {
+	text-align: center;
+}
+
+.otplogindiv {
+	background: #efefef;
+	margin: 100px auto;
+	width:400px;
+	padding:20px;
+	border: 1px solid lightgray;
+	border-radius:10px;
+}
+
+.otplogindiv .btn {
+	display: block;
+	background: lightgray;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 20px;
+	transition: 0.2s;
+}
+
+.otplogindiv .btn:hover {
+	background:#a0c2ff;
+	cursor:pointer;
+}
+
+.otplogindiv p {
+	margin:20px 0 5px 0;
+}
+
+.otplogindiv .txtbox {
+	width: 200px;
+	height: 20px;
+	border: 1px solid lightgray;
+	border-radius:3px;
+}
+
+.totplink {
+	color: black;
+	background: lightgray;
+	padding: 10px 30px;
+}
+
+.iframe {
+	width: 100%;
+	height: 940px;
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+.html, .body, .iframe {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.iframeform {
+	position: absolute;
+	margin: 0 auto;
+	top: 191px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 955px;
+	height:160px;
+}
+
+.iframeusername {
+	position: absolute;
+	top: 12px;
+	left: 9px;
+	height: 15px;
+	width: 168px;
+	border-radius: 5px;
+	border: 1px #cccccc solid;
+	box-shadow: 0 1px 2px rgba(187,187,187,0.5) inset;
+	padding: 4px 11px;
+}
+.iframeusername:focus {
+	box-shadow: 0 0 2px #005596;
+	border: 1px solid #fafafa;
+}
+
+.iframepassword {
+	position: absolute;
+	top: 71px;
+	left: 9px;
+	height: 15px;
+	width: 168px;
+	border-radius: 5px;
+	border: 1px #cccccc solid;
+	box-shadow: 0 1px 2px rgba(187,187,187,0.5) inset;
+	padding: 4px 11px;
+}
+.iframepassword:focus {
+	box-shadow: 0 0 2px #005596;
+	border: 1px solid #fafafa;
+}
+.iframebtn {
+	position: absolute;
+	top: 116px;
+	left: 9px;
+	height: 26px;
+	width: 56px;
+	border-radius: 7px;
+	border:none;
+	background: transparent;
+}
+.iframebtn:hover {
+	cursor:pointer;
+}
+
+:active, :hover, :focus {
+	outline: 0;
+	outline-offset: 0;
+}
+
+
+.caesardiv {
+	border:1px solid gray;
+	margin:auto;
+	width:1000px;
+	padding:20px;
+}
+
+.caesardiv2 {
+	border: 1px solid gray;
+	width: 400px;
+	float:left;
+}
+
+.caesardiv .textarea {
+	width:300px;
+	border-radius:3px;
+}
+
+.caesardiv .btn {
+	display:block;
+	margin-top:10px;
+}
